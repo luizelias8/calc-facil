@@ -2,11 +2,17 @@ import argparse
 import sys
 from .calculadora import Calculadora
 
+
 def main():
     """Função principal da interface de linha de comando."""
-    parser = argparse.ArgumentParser(description='Calculadora simples em Python')
-    parser.add_argument('operacao', choices=['soma', 'subtracao', 'multiplicacao', 'divisao'],
-                        help='Operação a ser realizada')
+    parser = argparse.ArgumentParser(
+        description='Calculadora simples em Python'
+    )
+    parser.add_argument(
+        'operacao',
+        choices=['soma', 'subtracao', 'multiplicacao', 'divisao'],
+        help='Operação a ser realizada',
+    )
     parser.add_argument('a', type=float, help='Primeiro número')
     parser.add_argument('b', type=float, help='Segundo número')
 
@@ -31,6 +37,7 @@ def main():
     except Exception as e:
         print(f'Erro inesperado: {str(e)}', file=sys.stderr)
         return 2
+
 
 if __name__ == '__main__':
     sys.exit(main())

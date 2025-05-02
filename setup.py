@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='calc-facil',
-    version='1.0.0',
+    version='1.0.1',
     author='Luiz Elias',
     author_email='luizelias8@gmail.com',
     description='Uma calculadora simples para operações básicas',
@@ -15,14 +15,10 @@ setup(
     classifiers=[
         'Topic :: Education',
         'Natural Language :: Portuguese (Brazilian)',
-        'Development Status :: 5 - Production/Stable'
+        'Development Status :: 5 - Production/Stable',
     ],
     packages=find_packages(),
     python_requires='>=3.6',
     install_requires=[],
-    entry_points={
-        'console_scripts': [
-            'calc-facil=calc_facil.cli:main'
-        ]
-    }
+    entry_points={'console_scripts': ['calc-facil=calc_facil.cli:main']},
 )
