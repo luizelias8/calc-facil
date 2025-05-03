@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='calc-facil',
-    version='1.0.1',
+    version='1.1.0',
     author='Luiz Elias',
     author_email='luizelias8@gmail.com',
     description='Uma calculadora simples para operações básicas',

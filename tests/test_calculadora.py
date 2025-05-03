@@ -29,3 +29,10 @@ class TestCalculadora:
     def test_divisao_por_zero(self):
         with pytest.raises(ZeroDivisionError):
             self.calc.divisao(5, 0)
+
+    def test_potencial(self):
+        assert self.calc.potencia(2, 3) == 8
+        assert self.calc.potencia(5, 2) == 25
+        assert self.calc.potencia(2, 0) == 1
+        assert self.calc.potencia(0, 5) == 0
+        assert self.calc.potencia(2, -1) == 0.5

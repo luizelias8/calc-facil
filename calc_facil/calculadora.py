@@ -59,3 +59,16 @@ class Calculadora:
         if b == 0:
             raise ZeroDivisionError('Não é possível dividir por zero')
         return a / b
+
+    def potencia(self, base, expoente):
+        """
+        Calcula a potência de um número.
+
+        Args:
+            base: Número base
+            expoente: Expoente
+
+        Returns:
+            O resultado de base elevado ao expoente
+        """
+        return base**expoente

@@ -10,7 +10,7 @@ def main():
     )
     parser.add_argument(
         'operacao',
-        choices=['soma', 'subtracao', 'multiplicacao', 'divisao'],
+        choices=['soma', 'subtracao', 'multiplicacao', 'divisao', 'potencia'],
         help='Operação a ser realizada',
     )
     parser.add_argument('a', type=float, help='Primeiro número')
@@ -28,6 +28,8 @@ def main():
             resultado = calculadora.multiplicacao(args.a, args.b)
         elif args.operacao == 'divisao':
             resultado = calculadora.divisao(args.a, args.b)
+        elif args.operacao == 'potencia':
+            resultado = calculadora.potencia(args.a, args.b)
 
         print(f'Resultado: {resultado}')
         return 0

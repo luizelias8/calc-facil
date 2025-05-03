@@ -23,6 +23,7 @@ soma = calc.soma(5, 3) # 8
 diferenca = calc.subtracao(5, 3) # 2
 produto = calc.multiplicacao(5, 3) # 15
 quociente = calc.divisao(6, 3) # 2.0
+potencia = calc.potencia(2, 3) # 8
 
 # Tratamento de erros
 try:
@@ -47,6 +48,9 @@ calc-facil soma 2 3
 
 calc-facil divisao 10 2
 # Resultado: 5.0
+
+calc-facil potencia 2 3
+# Resultado: 8.0
 ```
 
 ## As operações disponíveis são:
@@ -55,6 +59,7 @@ calc-facil divisao 10 2
 - subtracao
 - multiplicacao
 - divisao
+- potencia
 
 ## Operações disponíveis
 
@@ -62,6 +67,7 @@ calc-facil divisao 10 2
 - **subtracao(a, b)**: Retorna a diferença entre a e b
 - **multiplicacao(a, b)**: Retorna o produto de a e b
 - **divisao(a, b)**: Retorna o quociente da divisão de a por b (lança ZeroDivisionError se b for zero)
+- **potencia(base, expoente)**: Retorna a base elevada ao expoente
 
 ## Pré-requisitos
 
