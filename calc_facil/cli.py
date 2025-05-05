@@ -10,11 +10,23 @@ def main():
     )
     parser.add_argument(
         'operacao',
-        choices=['soma', 'subtracao', 'multiplicacao', 'divisao', 'potencia'],
+        choices=[
+            'soma',
+            'subtracao',
+            'multiplicacao',
+            'divisao',
+            'potencia',
+            'raiz_quadrada',
+        ],
         help='Operação a ser realizada',
     )
     parser.add_argument('a', type=float, help='Primeiro número')
-    parser.add_argument('b', type=float, help='Segundo número')
+    parser.add_argument(
+        'b',
+        type=float,
+        nargs='?',
+        help='Segundo número (não necessário para raiz_quadrada)',
+    )
 
     args = parser.parse_args()
     calculadora = Calculadora()
@@ -30,6 +42,8 @@ def main():
             resultado = calculadora.divisao(args.a, args.b)
         elif args.operacao == 'potencia':
             resultado = calculadora.potencia(args.a, args.b)
+        elif args.operacao == 'raiz_quadrada':
+            resultado = calculadora.raiz_quadrada(args.a)
 
         print(f'Resultado: {resultado}')
         return 0

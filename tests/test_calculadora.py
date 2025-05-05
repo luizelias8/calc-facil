@@ -36,3 +36,13 @@ class TestCalculadora:
         assert self.calc.potencia(2, 0) == 1
         assert self.calc.potencia(0, 5) == 0
         assert self.calc.potencia(2, -1) == 0.5
+
+    def test_raiz_quadrada(self):
+        assert self.calc.raiz_quadrada(4) == 2
+        assert self.calc.raiz_quadrada(9) == 3
+        assert self.calc.raiz_quadrada(0) == 0
+        assert round(self.calc.raiz_quadrada(2), 4) == 1.4142
+
+    def test_raiz_quadrada_numero_negativo(self):
+        with pytest.raises(ValueError):
+            self.calc.raiz_quadrada(-4)

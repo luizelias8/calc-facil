@@ -72,3 +72,22 @@ class Calculadora:
             O resultado de base elevado ao expoente
         """
         return base**expoente
+
+    def raiz_quadrada(self, numero):
+        """
+        Calcula a raiz quadrada de um número.
+
+        Args:
+            numero: Número para calcular a raiz quadrada
+
+        Returns:
+            A raiz quadrada do número
+
+        Raises:
+            ValueError: Se o número for negativo
+        """
+        if numero < 0:
+            raise ValueError(
+                'Não é possível calcular a raiz quadrada de um número negativo'
+            )
+        return numero**0.5

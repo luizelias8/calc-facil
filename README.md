@@ -1,6 +1,6 @@
 # calc-facil
 
-Uma calculadora simples com operações básicas (soma, subtração, multiplicação, divisão).
+Uma calculadora simples com operações básicas (soma, subtração, multiplicação, divisão, potência e raiz quadrada).
 
 Este projeto foi criado como parte de um treinamento sobre como criar e publicar pacotes Python no PyPI.
 
@@ -24,6 +24,7 @@ diferenca = calc.subtracao(5, 3) # 2
 produto = calc.multiplicacao(5, 3) # 15
 quociente = calc.divisao(6, 3) # 2.0
 potencia = calc.potencia(2, 3) # 8
+raiz = calc.raiz_quadrada(9) # 3.0
 
 # Tratamento de erros
 try:
@@ -51,6 +52,9 @@ calc-facil divisao 10 2
 
 calc-facil potencia 2 3
 # Resultado: 8.0
+
+calc-facil raiz_quadrada 9
+# Resultado: 3.0
 ```
 
 ## As operações disponíveis são:
@@ -60,6 +64,7 @@ calc-facil potencia 2 3
 - multiplicacao
 - divisao
 - potencia
+- raiz_quadrada
 
 ## Operações disponíveis
 
@@ -68,6 +73,7 @@ calc-facil potencia 2 3
 - **multiplicacao(a, b)**: Retorna o produto de a e b
 - **divisao(a, b)**: Retorna o quociente da divisão de a por b (lança ZeroDivisionError se b for zero)
 - **potencia(base, expoente)**: Retorna a base elevada ao expoente
+- **raiz_quadrada(numero)**: Retorna a raiz quadrada do número (lança ValueError se o número for negativo)
 
 ## Pré-requisitos
 
