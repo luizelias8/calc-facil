@@ -46,3 +46,6 @@ class TestCalculadora:
     def test_raiz_quadrada_numero_negativo(self):
         with pytest.raises(ValueError):
             self.calc.raiz_quadrada(-4)
+
+    def test_juros_compostos(self):
+        assert round(self.calc.juros_compostos(1000, 0.05, 2), 2) == 1200.00

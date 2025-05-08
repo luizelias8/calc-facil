@@ -91,3 +91,17 @@ class Calculadora:
                 'Não é possível calcular a raiz quadrada de um número negativo'
             )
         return numero**0.5
+
+    def juros_compostos(self, capital, taxa, tempo):
+        """
+        Calcula o montante com juros compostos.
+
+        Args:
+            capital: Capital inicial
+            taxa: Taxa de juros (em decimal, ex: 5% → 0.05)
+            tempo: Tempo (número de períodos)
+
+        Returns:
+            O montante final após aplicação dos juros
+        """
+        return capital * (1 + taxa) ** tempo
