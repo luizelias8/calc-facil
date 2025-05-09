@@ -105,6 +105,6 @@ class Calculadora:
             O montante final após aplicação dos juros
         """
         if taxa > 1:
-            taxa = taxa /100
+            taxa = taxa / 100
 
         return capital * (1 + taxa) ** tempo
